@@ -1,0 +1,37 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model. This is the first table"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model. This is the second table"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: example__teams_details
+    description: 'team_location'
+    columns:
+      - name: Team
+        description: "Time"
+      
+      - name: City
+        description: "Cidade"
+        tests:
+          - test_is_la_team
+
+      - name: State
+        description: "Estado"
+
+
